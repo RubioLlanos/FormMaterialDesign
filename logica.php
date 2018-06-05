@@ -1,10 +1,5 @@
-<?php
-
-	$server = 'localhost';
-	$user = 'root';
-	$pass = '';
-	$database = 'clientes';
-	$cn = mysqli_connect($server,$user,"",$database);
+<?php	
+	require 'connection.php';
 
 	$nombre = $_POST['nombre'];
 	$apellido = $_POST['apellido'];
@@ -15,6 +10,8 @@
 	$telefono = $_POST['telefono'];
 	$ciudad = $_POST['ciudad'];
 
-	echo $nombre;
-	$rs = mysqli_query($cn,"CALL CREAR_CLIENTE('$nombre','$apellido','$email','$pass','$documento','$direccion','$telefono','$ciudad')");
+	$mysql = new connection();
+	$conexion = $mysql->get_connection();
+	echo "Bienvenido (a)".$nombre;
+	$rs = mysqli_query($conexion,"CALL CREAR_CLIENTE('$nombre','$apellido','$email','$pass','$documento','$direccion','$telefono','$ciudad')");
 ?>
