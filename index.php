@@ -8,7 +8,7 @@
 <body>
 	<div class="container container-forms">
 		<h3>Index de la página</h3>
-		<form method="post" action="">
+		<form method="post" action="http://localhost:8080/Forms/MaterialForms/init_sesion.php">
 			<div class="input-field">
 				<input type="email" name="email" required>
 				<label for="email">Email:</label>
@@ -17,11 +17,10 @@
 				<input type="password" name="pass">
 				<label for="pass">Contraseña:</label>
 			</div>
-			<a href="clientes.php" class="btn">Ingresar</a>
+			<!--<a href="clientes.php" class="btn">Ingresar</a>-->
+			<button class="btn">Ingresar</button>
 		</form>
-		<p>¿No tienes una cuenta?<a href="clientes.php" class="">Crear cuenta</a></p>
-		
-		
+		<p>¿No tienes una cuenta?<a href="clientes.php" class="">Crear cuenta</a></p>		
 	</div>
 
 <footer>

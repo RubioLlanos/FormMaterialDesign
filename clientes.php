@@ -7,6 +7,16 @@
 </head>
 <body style="background-image: url('images/transporte.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 	<div class="capa"></div>
+	<div class="col lg12 center-align">
+		<style type="text/css">
+			.ussser{color: #fff; position: relative;}
+		</style>
+		<?Php 
+		session_start();
+		echo "<h1 class='ussser'>Bienvenido(a) ".$_SESSION['email'].'</h1>';
+	?>
+		
+	</div>
 	<div class="container-forms">
 		<form method="post" action="http://localhost:8080/Forms/MaterialForms/logica.php">
 			<div class="input-field">
